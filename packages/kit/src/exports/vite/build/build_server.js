@@ -64,6 +64,7 @@ export class Server {
 			csp: ${s(config.kit.csp)},
 			csrf: {
 				check_origin: ${s(config.kit.csrf.checkOrigin)},
+				treat_same_protocol: ${s(config.kit.csrf.treatSameProtocol)},
 			},
 			dev: false,
 			embedded: ${config.kit.embedded},

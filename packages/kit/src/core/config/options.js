@@ -108,7 +108,8 @@ const options = object(
 			}),
 
 			csrf: object({
-				checkOrigin: boolean(true)
+				checkOrigin: boolean(true),
+				treatSameProtocol: boolean(false)
 			}),
 
 			embedded: boolean(false),

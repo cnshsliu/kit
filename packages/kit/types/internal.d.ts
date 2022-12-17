@@ -297,6 +297,7 @@ export interface SSROptions {
 	csp: ValidatedConfig['kit']['csp'];
 	csrf: {
 		check_origin: boolean;
+		treat_same_protocol: boolean;
 	};
 	dev: boolean;
 	embedded: boolean;

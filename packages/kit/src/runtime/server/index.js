@@ -44,7 +44,10 @@ export async function respond(request, options, state) {
 	if (options.csrf.check_origin) {
 		const forbidden =
 			request.method === 'POST' &&
-			request.headers.get('origin') !== url.origin &&
+			(options.csrf.treat_same_protocol ?
+				request.headers.get('origin')?.split("://")[1] !== url.origin.split("://")[1]
+				:request.headers.get('origin') !== url.origin
+			) &&
 			is_form_content_type(request);
 
 		if (forbidden) {

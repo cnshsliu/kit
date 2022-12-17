@@ -323,6 +323,7 @@ export interface KitConfig {
 		 * @default true
 		 */
 		checkOrigin?: boolean;
+		treatSameProtocol?: boolean;
 	};
 	/**
 	 * Whether or not the app is embedded inside a larger app. If `true`, SvelteKit will add its event listeners related to navigation etc on the parent of `%sveltekit.body%` instead of `window`, and will pass `params` from the server rather than inferring them from `location.pathname`.

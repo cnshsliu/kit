@@ -446,7 +446,8 @@ export async function dev(vite, vite_config, svelte_config) {
 					{
 						csp: svelte_config.kit.csp,
 						csrf: {
-							check_origin: svelte_config.kit.csrf.checkOrigin
+							check_origin: svelte_config.kit.csrf.checkOrigin,
+							treat_same_protocol: svelte_config.kit.csrf.treatSameProtocol
 						},
 						dev: true,
 						embedded: svelte_config.kit.embedded,
